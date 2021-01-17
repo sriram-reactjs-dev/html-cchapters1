@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+    
+    <form>
+    
+   
+    
+    
+                <label>Name:<input type="text" id ="username"></label></br></br>
+                <label>Email Id:<input type="emailid"id ="emailid"></label></br></br>
+                <label>Mobile:<input type="mobile" id ="mobile"></label><br><br>
+                <label>Password:<input type="Password"placeholder="Enter your Password"id ="password"></label></br></br>
+                <button onclick="submission()"  > submit</button>
+               
+                 
+
+</form>
+
+<script>
+    
+
+   function submission(){
+       event.preventDefault();
+      var username =document.getElementById("username").value;
+       var emailid =document.getElementById("emailid").value;
+       var password =document.getElementById("password").value;
+       var mobile =document.getElementById("mobile").value;
+       var data ={username:username,emailid:emailid,password:password,mobile:mobile}
+       var output = JSON.stringify(data);
+       localStorage.setItem("output",output);
+       console.log(localStorage.getItem("output"));
+
+
+   }
+</script>
+</body>
+</html>
